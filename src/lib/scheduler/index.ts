@@ -91,7 +91,7 @@ export function startScheduler() {
   console.log(`[Scheduler] Starting with schedule: ${cronExpression}`);
 
   scheduledTask = cron.schedule(cronExpression, runDueAutomations, {
-    timezone: process.env.TZ || "UTC",
+    timezone: process.env.TIMEZONE || "UTC",
   });
 
   console.log("[Scheduler] Started successfully");
