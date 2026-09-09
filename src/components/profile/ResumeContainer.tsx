@@ -48,13 +48,13 @@ function ResumeContainer({
   } = useAgentChat();
   const [showClearChatConfirm, setShowClearChatConfirm] = useState(false);
   const parsedReviewData = useMemo(() => {
-    if (!resume.reviewData) return null;
+    if (!resume?.reviewData) return null;
     try {
-      return JSON.parse(resume.reviewData) as ResumeReviewData;
+      return JSON.parse(resume?.reviewData) as ResumeReviewData;
     } catch {
       return null;
     }
-  }, [resume.reviewData]);
+  }, [resume?.reviewData]);
   const resumeSectionRef = useRef<AddResumeSectionRef>(null);
   const [showExportDialog, setShowExportDialog] = useState(false);
   const [showDiscardImportConfirm, setShowDiscardImportConfirm] =

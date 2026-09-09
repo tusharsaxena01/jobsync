@@ -103,7 +103,7 @@ export function useResumeImport(resume: Resume) {
         }
       }
     },
-    [resume.id],
+    [resume?.id],
   );
 
   // Abort any in-flight import when the component unmounts.

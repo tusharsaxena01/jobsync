@@ -101,7 +101,7 @@ export const APP_CONSTANTS = {
   // Greenhouse job source
   GREENHOUSE_BASE_URL: "https://boards-api.greenhouse.io/v1/boards",
   GREENHOUSE_BOARD_URL: "https://boards.greenhouse.io", // public job board (not API)
-  MAX_GREENHOUSE_COMPANIES: 25, // per automation
+  MAX_GREENHOUSE_COMPANIES: 1000, // per automation
   GREENHOUSE_LISTING_CAP: 50, // safety ceiling applied after the relevance floor
   GREENHOUSE_FLOOR_MIN_TITLE_HITS: 1,
   GREENHOUSE_FLOOR_MIN_KEYWORD_HITS: 2,
@@ -235,6 +235,14 @@ export const SCHEDULER_CONSTANTS = {
   ENABLED: true,
   CRON_EXPRESSION: "0 * * * *", // Every hour at minute 0
   STALE_RUN_TIMEOUT_MS: 15 * 60 * 1000, // 15 min; reaper cutoff for stuck runs
+} as const;
+
+export const DB_BACKUP_CONSTANTS = {
+  DEFAULT_CRON_EXPRESSION: "0 2 * * *", // Daily at 2:00 AM
+  DEFAULT_SMTP_HOST: "smtp.gmail.com",
+  DEFAULT_SMTP_PORT: 465,
+  FILE_PREFIX: "job_sync_db_",
+  MIME_TYPE: "application/x-sqlite3",
 } as const;
 
 export const JOB_SOURCES = [

@@ -6,3 +6,17 @@ export { importBackup, preflightBackup, countTargetContent } from "./import";
 export type { ImportResult, PreflightResult } from "./import";
 export { listSnapshots, readSnapshot, writeSnapshot, snapshotDir } from "./snapshot";
 export type { SnapshotInfo } from "./snapshot";
+export {
+  formatBackupFileName,
+  resolveDatabasePath,
+  createDatabaseSnapshot,
+  sendBackupEmail,
+  uploadBackupToGoogleDrive,
+  runDatabaseBackup,
+} from "./dbBackup";
+export type {
+  DatabaseBackupResult,
+  EmailBackupResult,
+  DriveBackupResult,
+  RunBackupOptions,
+} from "./dbBackup";

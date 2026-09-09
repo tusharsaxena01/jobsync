@@ -163,3 +163,11 @@ export async function syncSchedulerState() {
     stopScheduler();
   }
 }
+
+export {
+  startDatabaseBackupScheduler,
+  stopDatabaseBackupScheduler,
+  isDatabaseBackupSchedulerRunning,
+  getDatabaseBackupSchedulerStatus,
+  runDatabaseBackupNow,
+} from "./backupScheduler";
